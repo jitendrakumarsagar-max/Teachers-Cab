@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teachers Cab | Monthly Commute Service in Lucknow</title>
+<style>
+:root{--navy:#14243b;--blue:#2457a6;--orange:#f28b35;--ink:#172235;--muted:#657187;--line:#e5eaf1;--bg:#f5f7fb;--green:#16815b}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{height:74px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,20px);position:sticky;top:0;z-index:5}
+.logo{font-size:24px;font-weight:900;letter-spacing:-1px;color:var(--navy)}.logo span{color:var(--orange)}
+nav{display:flex;gap:26px;align-items:center}nav a{color:#3e4b60;text-decoration:none;font-size:14px;font-weight:700}.nav-cta{background:var(--blue);color:#fff;padding:11px 16px;border-radius:9px}
+.hero{background:linear-gradient(115deg,#14243b,#2457a6 72%,#3977bd);padding:62px 20px 86px;color:white}.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffd39f;font-weight:850}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0}.hero p{font-size:17px;line-height:1.65;color:#e0e9f8;max-width:570px}.hero-card{background:#fff;color:var(--ink);padding:24px;border-radius:18px;box-shadow:0 18px 50px #07162e55}.hero-card h2{font-size:21px;margin:0 0 5px}.hero-card>p{font-size:13px;color:var(--muted);margin:0 0 17px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font:600 14px inherit;color:var(--ink);background:transparent}.submit{grid-column:1/-1;border:0;background:var(--orange);color:#fff;border-radius:10px;padding:14px;font-size:15px;font-weight:850;cursor:pointer}
+main{max-width:1100px;margin:-34px auto 60px;padding:0 20px;position:relative}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.trust-card,.panel,.plan{background:#fff;border:1px solid var(--line);border-radius:15px}.trust-card{padding:18px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px #18233b08}.icon{width:42px;height:42px;border-radius:12px;background:#fff3e7;display:grid;place-items:center;font-size:21px}.trust-card b{display:block;font-size:14px}.trust-card small{color:var(--muted)}
+.section{margin-top:42px}.section-head{text-align:center;margin-bottom:20px}.section-head h2{font-size:29px;margin:0 0 7px}.section-head p{margin:0;color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.plan{padding:22px;position:relative}.plan.featured{border:2px solid var(--blue);box-shadow:0 10px 28px #2457a618}.badge{font-size:10px;font-weight:900;color:#fff;background:var(--blue);padding:6px 9px;border-radius:20px;display:inline-block}.plan h3{margin:12px 0 5px;font-size:20px}.plan .desc{font-size:13px;color:var(--muted);min-height:40px}.plan ul{padding-left:18px;color:#46536a;font-size:13px;line-height:1.9}.plan button{width:100%;padding:12px;border:1px solid var(--blue);border-radius:9px;background:#fff;color:var(--blue);font-weight:800;cursor:pointer}.featured button{background:var(--blue);color:#fff}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:20px;background:#fff;border:1px solid var(--line);border-radius:14px}.num{font-weight:900;color:var(--orange);font-size:13px}.step h3{margin:8px 0}.step p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.coverage{background:#eaf1fb;border-radius:16px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.coverage h2{margin:0 0 7px}.coverage p{margin:0;color:#53627a;line-height:1.6}.coverage .areas{font-weight:800;color:var(--blue);max-width:390px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq article{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px}.faq h3{font-size:15px;margin:0 0 7px}.faq p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;font-size:12px;line-height:1.8}footer b{color:#fff}
+#notice{display:none;margin-top:12px;padding:12px;border-radius:9px;background:#eaf7f0;color:#176544;font-size:13px;line-height:1.5}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr}.hero{padding-top:42px}.trust,.plans,.how{grid-template-columns:1fr}.coverage{display:block}.coverage .areas{margin-top:15px}.faq{grid-template-columns:1fr}nav{gap:12px}nav a:not(.nav-cta){display:none}}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}.field.full,.submit{grid-column:auto}.hero-card{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="logo">teachers<span> cab</span></div><nav><a href="#registration">Teachers</a><a href="#matching">Route Matching</a><a href="#availability">Live Availability</a><a href="#admin">Admin Login</a><a class="nav-cta" href="#enquiry">Get a Quote</a></nav></header>
+<section class="hero"><div class="hero-inner">
+<div><div class="eyebrow">Dedicated monthly commute service · Lucknow</div><h1>Your daily duty commute,<br>made easier.</h1><p>Reliable, pre-arranged cab travel for teachers working in and around the Lucknow State Capital Region. Plan your daily pickup and drop on a monthly rental basis.</p></div>
+<div class="hero-card" id="enquiry"><h2>Get your monthly cab quote</h2><p>Share your commute details. Our team can contact you with a suitable plan.</p>
+<form id="quoteForm" class="form-grid">
+<div class="field"><label for="name">TEACHER'S NAME</label><input id="name" placeholder="Your name" required></div>
+<div class="field"><label for="phone">MOBILE NUMBER</label><input id="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit number" required></div>
+<div class="field"><label for="pickup">PICKUP LOCALITY</label><input id="pickup" placeholder="e.g. Aliganj" required></div>
+<div class="field"><label for="drop">SCHOOL / DUTY LOCATION</label><input id="drop" placeholder="e.g. Gomti Nagar" required></div>
+<div class="field"><label for="timing">DUTY TIMING</label><select id="timing"><option>Morning pickup / afternoon drop</option><option>Morning pickup / evening drop</option><option>Shift-based / other timing</option></select></div>
+<div class="field"><label for="days">DUTY DAYS</label><select id="days"><option>Monday to Saturday</option><option>Monday to Friday</option><option>As per school calendar</option><option>Other / flexible</option></select></div>
+<div class="field full"><label for="riders">NUMBER OF TEACHERS TRAVELLING</label><select id="riders"><option>1 teacher</option><option>2 teachers</option><option>3–4 teachers</option><option>5 or more teachers</option></select></div>
+<button class="submit" type="submit">Request Monthly Quote →</button>
+</form><div id="notice"></div>
+</div></div></section>
+<main>
+<div class="trust"><div class="trust-card"><div class="icon">📅</div><div><b>Monthly rental plans</b><small>Predictable commute arrangements</small></div></div><div class="trust-card"><div class="icon">📍</div><div><b>Route-based planning</b><small>Pickup and duty point coordination</small></div></div><div class="trust-card"><div class="icon">🚕</div><div><b>Shared or dedicated cab</b><small>Subject to route and availability</small></div></div></div>
+<section class="section" id="plans"><div class="section-head"><h2>Monthly commute options</h2><p>Choose a service style that suits your duty schedule.</p></div><div class="plans">
+<article class="plan"><h3>Shared Route Cab</h3><p class="desc">For teachers travelling along a similar route and schedule.</p><ul><li>Monthly seat-based arrangement</li><li>Planned common pickup points</li><li>Cost shared among passengers</li></ul><button onclick="fillPlan('Shared Route Cab')">Enquire about shared cab</button></article>
+<article class="plan featured"><span class="badge">POPULAR OPTION</span><h3>Dedicated Monthly Cab</h3><p class="desc">A cab arranged for your group and agreed daily timings.</p><ul><li>Pickup and drop as agreed</li><li>Monthly rental quotation</li><li>Suitable for a group of colleagues</li></ul><button onclick="fillPlan('Dedicated Monthly Cab')">Enquire about dedicated cab</button></article>
+<article class="plan"><h3>Flexible Duty Cab</h3><p class="desc">For changing school schedules or non-standard duty days.</p><ul><li>Discuss variable timings</li><li>Route and usage-based quote</li><li>Availability confirmed in advance</li></ul><button onclick="fillPlan('Flexible Duty Cab')">Enquire about flexible cab</button></article>
+</div></section>
+
+<section class="section" id="registration">
+<div class="section-head"><h2>Teacher registration</h2><p>Create a commuter profile to request a monthly cab arrangement.</p></div>
+<div class="panel" style="padding:22px">
+<form id="registrationForm" class="form-grid">
+<div class="field"><label for="regName">TEACHER'S NAME</label><input id="regName" placeholder="Full name" required></div>
+<div class="field"><label for="regPhone">MOBILE NUMBER</label><input id="regPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile number" required></div>
+<div class="field"><label for="regSchool">SCHOOL / INSTITUTION</label><input id="regSchool" placeholder="School or institution name" required></div>
+<div class="field"><label for="regHome">HOME PICKUP LOCALITY</label><input id="regHome" placeholder="Locality only, e.g. Aliganj" required></div>
+<div class="field"><label for="regDuty">DUTY LOCATION / LOCALITY</label><input id="regDuty" placeholder="e.g. Gomti Nagar" required></div>
+<div class="field"><label for="regTime">DUTY TIMING</label><select id="regTime"><option>Morning to afternoon</option><option>Morning to evening</option><option>Other / shift-based</option></select></div>
+<button class="submit" type="submit">Create Demo Profile</button>
+</form><div id="registrationNotice" class="notice" style="display:none;margin-top:12px;padding:12px;border-radius:9px;background:#eaf7f0;color:#176544;font-size:13px"></div>
+<p style="font-size:12px;color:#657187;margin:12px 0 0">Prototype only: use sample details while testing. This form stores demo entries only in this browser; it does not send them to a server.</p>
+</div></section>
+<section class="section" id="matching">
+<div class="section-head"><h2>Route matching</h2><p>Find demo commuter profiles with similar pickup and duty locations.</p></div>
+<div class="panel" style="padding:22px">
+<div class="form-grid">
+<div class="field"><label for="matchPickup">YOUR PICKUP LOCALITY</label><input id="matchPickup" placeholder="e.g. Aliganj"></div>
+<div class="field"><label for="matchDuty">YOUR DUTY LOCALITY</label><input id="matchDuty" placeholder="e.g. Gomti Nagar"></div>
+<button class="submit" type="button" onclick="matchRoutes()">Find similar routes</button>
+</div>
+<div id="matchResults" style="margin-top:14px;color:#657187;font-size:13px">Register demo profiles above, then search for similar routes here.</div>
+</div></section>
+<section class="section" id="subscription">
+<div class="section-head"><h2>Monthly subscription</h2><p>Choose a plan type; final monthly price depends on route, distance, duty days and vehicle.</p></div>
+<div class="plans">
+<article class="plan"><h3>Shared Seat Plan</h3><p class="desc">A seat in a shared cab with teachers travelling on a similar route.</p><ul><li>Monthly seat arrangement</li><li>Common pickup points</li><li>Route and seat availability confirmed first</li></ul><button onclick="selectSubscription('Shared Seat Plan')">Select plan</button></article>
+<article class="plan featured"><span class="badge">FOR TEACHER GROUPS</span><h3>Group Monthly Plan</h3><p class="desc">A monthly cab arrangement for colleagues travelling together.</p><ul><li>Group pickup coordination</li><li>Agreed duty schedule</li><li>Monthly rental quotation</li></ul><button onclick="selectSubscription('Group Monthly Plan')">Select plan</button></article>
+<article class="plan"><h3>Dedicated Cab Plan</h3><p class="desc">A dedicated vehicle for an agreed route and schedule.</p><ul><li>Dedicated vehicle arrangement</li><li>Pickup and drop schedule</li><li>Terms agreed before start</li></ul><button onclick="selectSubscription('Dedicated Cab Plan')">Select plan</button></article>
+</div>
+<div id="subscriptionNotice" style="display:none;margin-top:12px;padding:12px;background:#eaf1fb;border-radius:9px;color:#2457a6;font-size:13px"></div>
+</section>
+
+
+<section class="section" id="driver">
+<div class="section-head"><h2>Driver & vehicle registration</h2><p>Register driver and cab details for admin review.</p></div>
+<div class="panel" style="padding:22px">
+<form id="driverForm" class="form-grid">
+<div class="field"><label for="driverName">DRIVER NAME</label><input id="driverName" required placeholder="Full name"></div>
+<div class="field"><label for="driverPhone">DRIVER MOBILE</label><input id="driverPhone" type="tel" inputmode="numeric" pattern="[0-9]{10}" required placeholder="10-digit mobile number"></div>
+<div class="field"><label for="vehicleType">VEHICLE TYPE</label><select id="vehicleType"><option>Sedan</option><option>Hatchback</option><option>SUV / MUV</option><option>Van</option></select></div>
+<div class="field"><label for="vehicleNumber">VEHICLE REGISTRATION</label><input id="vehicleNumber" required placeholder="e.g. UP32 AB 1234"></div>
+<div class="field"><label for="seats">PASSENGER SEATS</label><select id="seats"><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+<div class="field"><label for="driverArea">OPERATING AREA</label><input id="driverArea" required placeholder="e.g. Lucknow / Gomti Nagar"></div>
+<button class="submit" type="submit">Register Driver (Demo)</button>
+</form>
+<div id="driverNotice" style="display:none;margin-top:12px;padding:12px;border-radius:9px;background:#eaf7f0;color:#176544;font-size:13px"></div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">Prototype only. Verify driving licence, vehicle registration, insurance, permits, fitness and applicable police/transport requirements before onboarding any driver.</p>
+</div></section>
+
+<section class="section" id="payment">
+<div class="section-head"><h2>Online monthly payment</h2><p>Preview a monthly invoice and payment status. No real payment is collected in this demo.</p></div>
+<div class="panel" style="padding:22px">
+<div class="form-grid">
+<div class="field"><label for="payTeacher">TEACHER NAME</label><input id="payTeacher" placeholder="Registered teacher name"></div>
+<div class="field"><label for="payMonth">SUBSCRIPTION MONTH</label><input id="payMonth" type="month"></div>
+<div class="field"><label for="payPlan">PLAN</label><select id="payPlan"><option>Shared Seat Plan</option><option>Group Monthly Plan</option><option>Dedicated Cab Plan</option></select></div>
+<div class="field"><label for="payAmount">MONTHLY AMOUNT (₹)</label><input id="payAmount" type="number" min="1" placeholder="Enter agreed amount"></div>
+<button class="submit" type="button" onclick="createDemoInvoice()">Generate invoice preview</button>
+</div>
+<div id="invoicePreview" style="display:none;margin-top:15px;padding:16px;background:#f5f7fb;border:1px solid #e5eaf1;border-radius:10px"></div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">For live payments, integrate a trusted payment gateway with server-side order creation, signature verification, refunds and payment webhooks. Never collect or store card/UPI PIN details on this page.</p>
+</div></section>
+
+<section class="section" id="whatsapp">
+<div class="section-head"><h2>WhatsApp notifications</h2><p>Prepare a message for a teacher or parent contact using WhatsApp.</p></div>
+<div class="panel" style="padding:22px">
+<div class="form-grid">
+<div class="field"><label for="waPhone">WHATSAPP NUMBER (WITH COUNTRY CODE)</label><input id="waPhone" inputmode="numeric" placeholder="e.g. 919876543210"></div>
+<div class="field"><label for="waType">MESSAGE TYPE</label><select id="waType"><option>Monthly cab enquiry received</option><option>Monthly payment reminder</option><option>Route / pickup confirmation</option><option>Driver and cab details</option></select></div>
+<div class="field full"><label for="waMessage">MESSAGE</label><input id="waMessage" value="Hello, this is Teachers Cab. Please contact us to confirm your monthly commute details."></div>
+<button class="submit" type="button" onclick="openWhatsApp()">Open WhatsApp message</button>
+</div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">This opens WhatsApp with a pre-filled message. Automatic reminders and bulk notifications require the official WhatsApp Business Platform, user consent and a connected backend.</p>
+</div></section>
+
+<section class="section" id="admin">
+<div class="section-head"><h2>Admin dashboard</h2><p>Demo overview of teacher enquiries, drivers and monthly subscription records saved in this browser.</p></div>
+<div class="trust" style="margin-bottom:14px">
+<div class="trust-card"><div class="icon">👩‍🏫</div><div><b id="teacherCount">0</b><small>Teacher profiles</small></div></div>
+<div class="trust-card"><div class="icon">🚗</div><div><b id="driverCount">0</b><small>Driver registrations</small></div></div>
+<div class="trust-card"><div class="icon">🧾</div><div><b id="invoiceCount">0</b><small>Invoice previews</small></div></div>
+</div>
+<div class="panel" style="padding:20px">
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><h3 style="margin:0">Management overview</h3><button type="button" onclick="refreshAdmin()" style="background:#2457a6;color:white;padding:10px 14px;border-radius:8px">Refresh dashboard</button></div>
+<div id="adminSummary" style="margin-top:14px;color:#657187;font-size:13px;line-height:1.8"></div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">Demo dashboard only—not a secure multi-user admin system. Records are stored in this browser's local storage. A production dashboard needs authenticated admin accounts, role permissions, encrypted server-side storage, audit logs and backups.</p>
+</div></section>
+
+
+<section class="section" id="availability">
+<div class="section-head"><h2>Live route & seat availability</h2><p>Check a sample route and seat map. Live data requires a connected server and driver app.</p></div>
+<div class="panel" style="padding:22px">
+<div class="form-grid">
+<div class="field"><label for="livePickup">PICKUP LOCALITY</label><input id="livePickup" placeholder="e.g. Aliganj"></div>
+<div class="field"><label for="liveDrop">DUTY LOCATION</label><input id="liveDrop" placeholder="e.g. Gomti Nagar"></div>
+<div class="field"><label for="liveDate">TRAVEL DATE</label><input id="liveDate" type="date"></div>
+<div class="field"><label for="liveShift">DUTY SHIFT</label><select id="liveShift"><option>Morning pickup</option><option>Afternoon pickup</option><option>Evening pickup</option></select></div>
+<button class="submit" type="button" onclick="showDemoAvailability()">Check demo availability</button>
+</div>
+<div id="availabilityResults" style="display:none;margin-top:16px"></div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">Demo availability is illustrative only. Production availability must be updated from confirmed driver schedules, vehicle capacity, route timings and current seat reservations to prevent double booking.</p>
+</div></section>
+
+<section class="section" id="gateway">
+<div class="section-head"><h2>Secure online payment gateway</h2><p>Payment integration plan for monthly subscriptions.</p></div>
+<div class="panel" style="padding:22px">
+<div class="trust" style="grid-template-columns:repeat(3,1fr)">
+<div><b>1. Create order</b><p style="font-size:13px;color:#657187">Server creates a payment order for the confirmed monthly invoice.</p></div>
+<div><b>2. Pay securely</b><p style="font-size:13px;color:#657187">Teacher completes payment through a trusted payment provider checkout.</p></div>
+<div><b>3. Verify payment</b><p style="font-size:13px;color:#657187">Server verifies signed response/webhook and updates the subscription status.</p></div>
+</div>
+<div style="margin-top:14px;padding:13px;background:#fff7e9;border-radius:10px;color:#80511e;font-size:13px">Payment gateway status: <b>Not connected</b>. No payment is being collected on this prototype. Never put secret API keys in website code.</div>
+</div></section>
+
+<section class="section" id="secure-admin">
+<div class="section-head"><h2>Secure admin access</h2><p>Production admin access should use authenticated accounts and role-based permissions.</p></div>
+<div class="panel" style="padding:22px">
+<form id="adminLoginForm" class="form-grid">
+<div class="field"><label for="adminEmail">ADMIN EMAIL</label><input id="adminEmail" type="email" placeholder="Admin email address" required></div>
+<div class="field"><label for="adminPassword">PASSWORD</label><input id="adminPassword" type="password" placeholder="Enter password" required></div>
+<button class="submit" type="submit">Demo sign-in preview</button>
+</form>
+<div id="adminLoginNotice" style="display:none;margin-top:12px;padding:12px;border-radius:9px;background:#fff7e9;color:#80511e;font-size:13px"></div>
+<p style="font-size:12px;color:#657187;margin-bottom:0">This is not real authentication and does not validate or store credentials. A production system needs server-side authentication, password hashing, secure sessions, multi-factor authentication for administrators, role permissions, audit logs and rate limiting.</p>
+</div></section>
+
+<section class="section" id="database">
+<div class="section-head"><h2>Secure database & business records</h2><p>Central record-keeping for teachers, drivers, routes, bookings and monthly payments.</p></div>
+<div class="panel" style="padding:22px">
+<div class="how">
+<article class="step"><div class="num">TEACHER RECORDS</div><h3>Profiles & consent</h3><p>Store teacher contact details, pickup locality, school, schedule and consent with controlled access.</p></article>
+<article class="step"><div class="num">OPERATIONS</div><h3>Drivers & bookings</h3><p>Store verified driver and vehicle records, route assignments, seat reservations and booking history.</p></article>
+<article class="step"><div class="num">BILLING</div><h3>Invoices & payments</h3><p>Store invoice references, payment status, receipts, refunds and audit history—never card PINs or secret credentials.</p></article>
+</div>
+<div style="margin-top:14px;padding:13px;background:#eaf1fb;border-radius:10px;color:#2457a6;font-size:13px">Database status: <b>Prototype browser storage only</b>. Production requires a secure server-side database, encrypted connections, backups, access controls, retention rules and privacy safeguards.</div>
+</div></section>
+
+<section class="section" id="how"><div class="section-head"><h2>How Teachers Cab works</h2><p>A simple process to arrange your regular commute.</p></div><div class="how"><article class="step"><div class="num">STEP 01</div><h3>Share your route</h3><p>Tell us your pickup locality, school or duty location, timing and number of passengers.</p></article><article class="step"><div class="num">STEP 02</div><h3>Review your quote</h3><p>Discuss route feasibility, cab type, monthly rental, inclusions and any additional charges.</p></article><article class="step"><div class="num">STEP 03</div><h3>Confirm the arrangement</h3><p>Once terms, schedule and availability are agreed, confirm your monthly commute plan.</p></article></div></section>
+<section class="section" id="coverage"><div class="coverage"><div><h2>Serving teachers across Lucknow and nearby areas</h2><p>Routes are planned based on teacher pickup points and school or duty locations. Coverage and daily availability are confirmed after enquiry.</p></div><div class="areas">Lucknow · Gomti Nagar · Indira Nagar · Aliganj · Jankipuram · Alambagh · Kanpur Road · nearby NCR-region routes subject to availability</div></div></section>
+<section class="section"><div class="section-head"><h2>Frequently asked questions</h2></div><div class="faq"><article><h3>Is this a monthly service?</h3><p>Yes. The service is intended for recurring duty commutes on a monthly rental basis. Final pricing depends on route, days, timings and cab arrangement.</p></article><article><h3>Can teachers share a cab?</h3><p>Shared-route options may be possible when pickup locations and duty timings align. This is subject to route feasibility and seat availability.</p></article><article><h3>Is the fare fixed?</h3><p>A monthly quote is provided after reviewing your route and requirements. Confirm all inclusions, extra kilometres, waiting time, holidays and cancellation terms before booking.</p></article><article><h3>Can I book immediately on this website?</h3><p>This version collects enquiry details only. A real booking, driver allocation, live tracking and online payment system must be connected separately.</p></article></div></section>
+</main>
+<footer><b>Teachers Cab</b> · Monthly cab rental service concept for teachers in the Lucknow State Capital Region.<br>This website is currently a prototype. Enquiry submission is a local demo only; no information is sent to a server and no cab is booked.</footer>
+<script>
+
+
+
+function showDemoAvailability(){
+ const pickup=document.getElementById('livePickup').value.trim(),drop=document.getElementById('liveDrop').value.trim(),date=document.getElementById('liveDate').value,shift=document.getElementById('liveShift').value;
+ if(!pickup||!drop||!date){alert('Enter pickup, duty location and travel date.');return;}
+ const box=document.getElementById('availabilityResults');box.style.display='block';
+ box.innerHTML='<div style="padding:14px;border:1px solid #e5eaf1;border-radius:10px;background:#f5f7fb"><b>'+escapeText(pickup)+' → '+escapeText(drop)+'</b><p style="margin:6px 0;color:#657187;font-size:13px">'+escapeText(date)+' · '+escapeText(shift)+'</p><b>Demo result: Route enquiry available</b><p style="margin:6px 0 0;color:#657187;font-size:13px">No live vehicle or seats are confirmed. Submit a monthly enquiry so the operator can verify route, driver and seats.</p></div>';
+}
+document.getElementById('adminLoginForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const box=document.getElementById('adminLoginNotice');box.style.display='block';
+ box.textContent='Demo only: no sign-in occurred and credentials were not checked or saved. Connect secure server-side authentication before using an admin account.';
+ e.target.reset();
+});
+
+function readLocal(key){try{return JSON.parse(localStorage.getItem(key)||'[]')}catch(e){return []}}
+function writeLocal(key,value){localStorage.setItem(key,JSON.stringify(value))}
+document.getElementById('driverForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const item={name:document.getElementById('driverName').value.trim(),phone:document.getElementById('driverPhone').value.trim(),type:document.getElementById('vehicleType').value,vehicle:document.getElementById('vehicleNumber').value.trim(),seats:document.getElementById('seats').value,area:document.getElementById('driverArea').value.trim(),status:'Pending review'};
+ const rows=readLocal('teachersCabDemoDrivers');rows.push(item);writeLocal('teachersCabDemoDrivers',rows);
+ const n=document.getElementById('driverNotice');n.style.display='block';n.textContent='Demo driver registration saved for '+item.name+'. Status: Pending review.';e.target.reset();refreshAdmin();
+});
+function createDemoInvoice(){
+ const name=document.getElementById('payTeacher').value.trim(),month=document.getElementById('payMonth').value,plan=document.getElementById('payPlan').value,amount=Number(document.getElementById('payAmount').value);
+ if(!name||!month||!Number.isFinite(amount)||amount<=0){alert('Enter teacher name, month and a valid monthly amount.');return;}
+ const invoice={name,month,plan,amount,status:'Unpaid (demo)'};
+ const rows=readLocal('teachersCabDemoInvoices');rows.push(invoice);writeLocal('teachersCabDemoInvoices',rows);
+ const box=document.getElementById('invoicePreview');box.style.display='block';box.innerHTML='<b>Invoice preview · Teachers Cab</b><br>Teacher: '+escapeText(name)+'<br>Month: '+escapeText(month)+'<br>Plan: '+escapeText(plan)+'<br>Amount: ₹'+amount.toLocaleString('en-IN')+'<br><b>Status: Unpaid (demo)</b><br><small>No payment has been initiated or received.</small>';
+ refreshAdmin();
+}
+function openWhatsApp(){
+ const phone=document.getElementById('waPhone').value.replace(/\D/g,'');
+ const msg=document.getElementById('waMessage').value.trim();
+ if(phone.length<10||phone.length>15||!msg){alert('Enter a valid WhatsApp number with country code and a message.');return;}
+ window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener');
+}
+function refreshAdmin(){
+ const teachers=getProfiles(),drivers=readLocal('teachersCabDemoDrivers'),invoices=readLocal('teachersCabDemoInvoices');
+ document.getElementById('teacherCount').textContent=teachers.length;
+ document.getElementById('driverCount').textContent=drivers.length;
+ document.getElementById('invoiceCount').textContent=invoices.length;
+ const recentTeachers=teachers.slice(-5).map(x=>escapeText(x.name)+' — '+escapeText(x.pickup)+' → '+escapeText(x.duty)).join('<br>')||'No teacher profiles yet.';
+ const recentDrivers=drivers.slice(-5).map(x=>escapeText(x.name)+' — '+escapeText(x.vehicle)+' ('+escapeText(x.status)+')').join('<br>')||'No driver registrations yet.';
+ const recentInvoices=invoices.slice(-5).map(x=>escapeText(x.name)+' — '+escapeText(x.month)+' — ₹'+Number(x.amount).toLocaleString('en-IN')+' ('+escapeText(x.status)+')').join('<br>')||'No invoice previews yet.';
+ document.getElementById('adminSummary').innerHTML='<b style="color:#172235">Recent teacher profiles</b><br>'+recentTeachers+'<hr style="border:0;border-top:1px solid #e5eaf1;margin:12px 0"><b style="color:#172235">Recent driver registrations</b><br>'+recentDrivers+'<hr style="border:0;border-top:1px solid #e5eaf1;margin:12px 0"><b style="color:#172235">Recent invoice previews</b><br>'+recentInvoices;
+}
+
+function normalizeRoute(value){return value.trim().toLowerCase().replace(/\s+/g,' ');}
+function getProfiles(){try{return JSON.parse(localStorage.getItem('teachersCabDemoProfiles')||'[]')}catch(e){return []}}
+document.getElementById('registrationForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const profile={name:document.getElementById('regName').value.trim(),school:document.getElementById('regSchool').value.trim(),pickup:document.getElementById('regHome').value.trim(),duty:document.getElementById('regDuty').value.trim(),timing:document.getElementById('regTime').value};
+ const profiles=getProfiles();profiles.push(profile);localStorage.setItem('teachersCabDemoProfiles',JSON.stringify(profiles));
+ const box=document.getElementById('registrationNotice');box.style.display='block';box.textContent='Demo profile created for '+profile.name+'. You can now test Route Matching below. Details remain in this browser only.';
+ e.target.reset();
+});
+function matchRoutes(){
+ const pickup=normalizeRoute(document.getElementById('matchPickup').value),duty=normalizeRoute(document.getElementById('matchDuty').value),box=document.getElementById('matchResults');
+ if(!pickup||!duty){box.textContent='Enter both pickup and duty localities to search.';return;}
+ const matches=getProfiles().filter(p=>normalizeRoute(p.pickup)===pickup&&normalizeRoute(p.duty)===duty);
+ if(!matches.length){box.textContent='No exact demo route matches found yet. Matching in a real service should also consider nearby pickup points, compatible duty times, available seats and consent.';return;}
+ box.innerHTML='<b style="color:#172235">Potential demo route matches: '+matches.length+'</b>'+matches.map(p=>'<div style="padding:12px;margin-top:8px;border:1px solid #e5eaf1;border-radius:9px;background:#fff"><b>'+escapeText(p.name)+'</b><div>'+escapeText(p.school)+'</div><div>Duty timing: '+escapeText(p.timing)+'</div><small>Contact details are hidden in this demo.</small></div>').join('');
+}
+function escapeText(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function selectSubscription(plan){const box=document.getElementById('subscriptionNotice');box.style.display='block';box.textContent='Selected: '+plan+'. Submit the monthly quote enquiry above to discuss route, vehicle, price and terms. No subscription is activated by this demo.';}
+function fillPlan(plan){document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});document.getElementById('notice').style.display='block';document.getElementById('notice').textContent='Selected interest: '+plan+'. Please complete the enquiry form below.';}
+refreshAdmin();
+document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const phone=document.getElementById('phone').value.trim();const summary=`Thank you, ${name}. Your enquiry details have been entered in this demo.\\nPickup: ${document.getElementById('pickup').value}\\nDuty location: ${document.getElementById('drop').value}\\nTiming: ${document.getElementById('timing').value}\\nDays: ${document.getElementById('days').value}\\nTeachers: ${document.getElementById('riders').value}\\nContact: ${phone}\\n\\nNo details have been sent. Connect a secure backend/WhatsApp or enquiry service to receive real requests.`;document.getElementById('notice').style.display='block';document.getElementById('notice').textContent=summary;});
+</script>
+</body></html>
