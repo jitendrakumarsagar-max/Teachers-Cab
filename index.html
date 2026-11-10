@@ -11,7 +11,7 @@ header{height:74px;background:#fff;border-bottom:1px solid var(--line);display:f
 nav{display:flex;gap:26px;align-items:center}nav a{color:#3e4b60;text-decoration:none;font-size:14px;font-weight:700}.nav-cta{background:var(--blue);color:#fff;padding:11px 16px;border-radius:9px}
 .hero{background:linear-gradient(115deg,#14243b,#2457a6 72%,#3977bd);padding:62px 20px 86px;color:white}.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
 .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffd39f;font-weight:850}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0}.hero p{font-size:17px;line-height:1.65;color:#e0e9f8;max-width:570px}.hero-card{background:#fff;color:var(--ink);padding:24px;border-radius:18px;box-shadow:0 18px 50px #07162e55}.hero-card h2{font-size:21px;margin:0 0 5px}.hero-card>p{font-size:13px;color:var(--muted);margin:0 0 17px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font:600 14px inherit;color:var(--ink);background:transparent}.submit{grid-column:1/-1;border:0;background:var(--orange);color:#fff;border-radius:10px;padding:14px;font-size:15px;font-weight:850;cursor:pointer}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font:600 14px inherit;color:var(--ink);background:transparent}.submit{grid-column:1/-1;border:0;background:var(--orange);color:#fff;border-radius:10px;padding:14px;font-size:15px;font-weight:850;cursor:pointer}.map-button{grid-column:1/-1;border:1px solid #2457a6;background:#eef4ff;color:#174a91;border-radius:10px;padding:12px;font-size:14px;font-weight:800;cursor:pointer}.map-help{grid-column:1/-1;margin:-4px 0 2px;color:#657187;font-size:12px}
 main{max-width:1100px;margin:-34px auto 60px;padding:0 20px;position:relative}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.trust-card,.panel,.plan{background:#fff;border:1px solid var(--line);border-radius:15px}.trust-card{padding:18px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px #18233b08}.icon{width:42px;height:42px;border-radius:12px;background:#fff3e7;display:grid;place-items:center;font-size:21px}.trust-card b{display:block;font-size:14px}.trust-card small{color:var(--muted)}
 .section{margin-top:42px}.section-head{text-align:center;margin-bottom:20px}.section-head h2{font-size:29px;margin:0 0 7px}.section-head p{margin:0;color:var(--muted)}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.plan{padding:22px;position:relative}.plan.featured{border:2px solid var(--blue);box-shadow:0 10px 28px #2457a618}.badge{font-size:10px;font-weight:900;color:#fff;background:var(--blue);padding:6px 9px;border-radius:20px;display:inline-block}.plan h3{margin:12px 0 5px;font-size:20px}.plan .desc{font-size:13px;color:var(--muted);min-height:40px}.plan ul{padding-left:18px;color:#46536a;font-size:13px;line-height:1.9}.plan button{width:100%;padding:12px;border:1px solid var(--blue);border-radius:9px;background:#fff;color:var(--blue);font-weight:800;cursor:pointer}.featured button{background:var(--blue);color:#fff}
@@ -34,6 +34,7 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <div class="field"><label for="phone">MOBILE NUMBER</label><input id="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit number" required></div>
 <div class="field"><label for="pickup">PICKUP LOCALITY</label><input id="pickup" placeholder="e.g. Aliganj" required></div>
 <div class="field"><label for="drop">SCHOOL / DUTY LOCATION</label><input id="drop" placeholder="e.g. Gomti Nagar" required></div>
+<button class="map-button" type="button" onclick="openGoogleRoute('pickup','drop')">📍 Google Maps पर रूट और दूरी देखें</button><p class="map-help">Pickup और school/duty location भरकर बटन दबाएँ। Google Maps में driving route खुलेगा।</p>
 <div class="field"><label for="timing">DUTY TIMING</label><select id="timing"><option>Morning pickup / afternoon drop</option><option>Morning pickup / evening drop</option><option>Shift-based / other timing</option></select></div>
 <div class="field"><label for="days">DUTY DAYS</label><select id="days"><option>Monday to Saturday</option><option>Monday to Friday</option><option>As per school calendar</option><option>Other / flexible</option></select></div>
 <div class="field full"><label for="riders">NUMBER OF TEACHERS TRAVELLING</label><select id="riders"><option>1 teacher</option><option>2 teachers</option><option>3–4 teachers</option><option>5 or more teachers</option></select></div>
@@ -57,6 +58,7 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <div class="field"><label for="regSchool">SCHOOL / INSTITUTION</label><input id="regSchool" placeholder="School or institution name" required></div>
 <div class="field"><label for="regHome">HOME PICKUP LOCALITY</label><input id="regHome" placeholder="Locality only, e.g. Aliganj" required></div>
 <div class="field"><label for="regDuty">DUTY LOCATION / LOCALITY</label><input id="regDuty" placeholder="e.g. Gomti Nagar" required></div>
+<button class="map-button" type="button" onclick="openGoogleRoute('regHome','regDuty')">📍 Google Maps पर रूट और दूरी देखें</button><p class="map-help">अपना pickup और duty स्थान भरें। रूट Google Maps में खुलेगा।</p>
 <div class="field"><label for="regTime">DUTY TIMING</label><select id="regTime"><option>Morning to afternoon</option><option>Morning to evening</option><option>Other / shift-based</option></select></div>
 <button class="submit" type="submit">Create Demo Profile</button>
 </form><div id="registrationNotice" class="notice" style="display:none;margin-top:12px;padding:12px;border-radius:9px;background:#eaf7f0;color:#176544;font-size:13px"></div>
@@ -145,6 +147,7 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <div class="form-grid">
 <div class="field"><label for="livePickup">PICKUP LOCALITY</label><input id="livePickup" placeholder="e.g. Aliganj"></div>
 <div class="field"><label for="liveDrop">DUTY LOCATION</label><input id="liveDrop" placeholder="e.g. Gomti Nagar"></div>
+<button class="map-button" type="button" onclick="openGoogleRoute('livePickup','liveDrop')">📍 Google Maps पर रूट और दूरी देखें</button><p class="map-help">दोनों स्थान भरें। Google Maps में driving route और अनुमानित दूरी/समय देखें।</p>
 <div class="field"><label for="liveDate">TRAVEL DATE</label><input id="liveDate" type="date"></div>
 <div class="field"><label for="liveShift">DUTY SHIFT</label><select id="liveShift"><option>Morning pickup</option><option>Afternoon pickup</option><option>Evening pickup</option></select></div>
 <button class="submit" type="button" onclick="showDemoAvailability()">Check demo availability</button>
@@ -195,6 +198,15 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <script>
 
 
+
+
+function openGoogleRoute(originId,destinationId){
+ const origin=document.getElementById(originId).value.trim();
+ const destination=document.getElementById(destinationId).value.trim();
+ if(!origin||!destination){alert('कृपया Pickup और School / Duty Location दोनों भरें।');return;}
+ const url='https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(origin+', Uttar Pradesh, India')+'&destination='+encodeURIComponent(destination+', Uttar Pradesh, India')+'&travelmode=driving';
+ window.open(url,'_blank','noopener');
+}
 
 function showDemoAvailability(){
  const pickup=document.getElementById('livePickup').value.trim(),drop=document.getElementById('liveDrop').value.trim(),date=document.getElementById('liveDate').value,shift=document.getElementById('liveShift').value;
