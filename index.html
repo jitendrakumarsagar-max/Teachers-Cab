@@ -11,7 +11,7 @@ header{height:74px;background:#fff;border-bottom:1px solid var(--line);display:f
 nav{display:flex;gap:26px;align-items:center}nav a{color:#3e4b60;text-decoration:none;font-size:14px;font-weight:700}.nav-cta{background:var(--blue);color:#fff;padding:11px 16px;border-radius:9px}
 .hero{background:linear-gradient(115deg,#14243b,#2457a6 72%,#3977bd);padding:62px 20px 86px;color:white}.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
 .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffd39f;font-weight:850}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0}.hero p{font-size:17px;line-height:1.65;color:#e0e9f8;max-width:570px}.hero-card{background:#fff;color:var(--ink);padding:24px;border-radius:18px;box-shadow:0 18px 50px #07162e55}.hero-card h2{font-size:21px;margin:0 0 5px}.hero-card>p{font-size:13px;color:var(--muted);margin:0 0 17px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font:600 14px inherit;color:var(--ink);background:transparent}.submit{grid-column:1/-1;border:0;background:var(--orange);color:#fff;border-radius:10px;padding:14px;font-size:15px;font-weight:850;cursor:pointer}.map-button{grid-column:1/-1;border:1px solid #2457a6;background:#eef4ff;color:#174a91;border-radius:10px;padding:12px;font-size:14px;font-weight:800;cursor:pointer}.map-help{grid-column:1/-1;margin:-4px 0 2px;color:#657187;font-size:12px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:5px}.field input,.field select{border:0;outline:0;width:100%;font:600 14px inherit;color:var(--ink);background:transparent}.submit{grid-column:1/-1;border:0;background:var(--orange);color:#fff;border-radius:10px;padding:14px;font-size:15px;font-weight:850;cursor:pointer}.map-button{grid-column:1/-1;border:1px solid #2457a6;background:#eef4ff;color:#174a91;border-radius:10px;padding:12px;font-size:14px;font-weight:800;cursor:pointer}.map-help{grid-column:1/-1;margin:-4px 0 8px;color:#26364d;font-size:13px;font-weight:600;line-height:1.55;background:#f3f6fb;padding:9px 11px;border-radius:8px}
 main{max-width:1100px;margin:-34px auto 60px;padding:0 20px;position:relative}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.trust-card,.panel,.plan{background:#fff;border:1px solid var(--line);border-radius:15px}.trust-card{padding:18px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px #18233b08}.icon{width:42px;height:42px;border-radius:12px;background:#fff3e7;display:grid;place-items:center;font-size:21px}.trust-card b{display:block;font-size:14px}.trust-card small{color:var(--muted)}
 .section{margin-top:42px}.section-head{text-align:center;margin-bottom:20px}.section-head h2{font-size:29px;margin:0 0 7px}.section-head p{margin:0;color:var(--muted)}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.plan{padding:22px;position:relative}.plan.featured{border:2px solid var(--blue);box-shadow:0 10px 28px #2457a618}.badge{font-size:10px;font-weight:900;color:#fff;background:var(--blue);padding:6px 9px;border-radius:20px;display:inline-block}.plan h3{margin:12px 0 5px;font-size:20px}.plan .desc{font-size:13px;color:var(--muted);min-height:40px}.plan ul{padding-left:18px;color:#46536a;font-size:13px;line-height:1.9}.plan button{width:100%;padding:12px;border:1px solid var(--blue);border-radius:9px;background:#fff;color:var(--blue);font-weight:800;cursor:pointer}.featured button{background:var(--blue);color:#fff}
@@ -33,6 +33,11 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <div class="field"><label for="name">TEACHER'S NAME</label><input id="name" placeholder="Your name" required></div>
 <div class="field"><label for="phone">MOBILE NUMBER</label><input id="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit number" required></div>
 <div class="field"><label for="pickup">PICKUP LOCALITY</label><input id="pickup" placeholder="e.g. Aliganj" required></div>
+<div class="field full"><label for="pilotDistrict">प्रारंभिक सेवा जिला</label>
+<select id="pilotDistrict" required>
+<option value="">जिला चुनें</option>
+<option>बाराबंकी</option><option>सीतापुर</option><option>उन्नाव</option>
+</select></div>
 <div class="field"><label for="drop">SCHOOL / DUTY LOCATION</label><input id="drop" placeholder="e.g. Gomti Nagar" required></div>
 <button class="map-button" type="button" onclick="openGoogleRoute('pickup','drop')">📍 Google Maps पर रूट और दूरी देखें</button><p class="map-help">Pickup और school/duty location भरकर बटन दबाएँ। Google Maps में driving route खुलेगा।</p>
 <div class="field"><label for="timing">DUTY TIMING</label><select id="timing"><option>Morning pickup / afternoon drop</option><option>Morning pickup / evening drop</option><option>Shift-based / other timing</option></select></div>
@@ -41,6 +46,13 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 <div class="field"><label for="monthlyDays">DUTY DAYS PER MONTH</label><input id="monthlyDays" type="number" min="1" max="31" value="26"></div>
 <div class="field full"><label for="riders">NUMBER OF TEACHERS TRAVELLING</label><select id="riders"><option>1 teacher</option><option>2 teachers</option><option>3–4 teachers</option><option>5 or more teachers</option></select></div>
 <button class="map-button" type="button" onclick="calculateQuoteDistance()">🧭 वास्तविक सड़क दूरी के आधार पर अनुमानित किराया निकालें</button>
+<button class="map-button" type="button" onclick="toggleManualDistance()">✍️ दूरी स्वयं दर्ज करें (Manual KM)</button>
+<div class="field full" id="manualDistancePanel" style="display:none">
+<label for="manualDistanceKm">एक तरफ की दूरी (किलोमीटर में)</label>
+<input id="manualDistanceKm" type="number" min="0.1" step="0.1" placeholder="उदाहरण: 18.5">
+<small style="display:block;color:#26364d;font-size:12px;line-height:1.5;margin-top:7px">Google Maps या सड़क संकेत से मिली एक तरफ की दूरी दर्ज करें। किराया अनुमान इसी दूरी से निकलेगा।</small>
+<button class="map-button" type="button" style="width:100%;margin-top:10px" onclick="calculateManualQuote()">इस दूरी से मासिक किराया निकालें</button>
+</div>
 <div id="fareEstimate" class="field full" style="display:none;background:#eaf7f0;color:#176544;line-height:1.6"></div>
 <button class="submit" type="submit">Request Monthly Quote →</button>
 </form><div id="notice"></div>
@@ -196,7 +208,7 @@ footer{background:var(--navy);color:#dce5f3;padding:32px 20px;text-align:center;
 </div></section>
 
 <section class="section" id="how"><div class="section-head"><h2>How Teachers Cab works</h2><p>A simple process to arrange your regular commute.</p></div><div class="how"><article class="step"><div class="num">STEP 01</div><h3>Share your route</h3><p>Tell us your pickup locality, school or duty location, timing and number of passengers.</p></article><article class="step"><div class="num">STEP 02</div><h3>Review your quote</h3><p>Discuss route feasibility, cab type, monthly rental, inclusions and any additional charges.</p></article><article class="step"><div class="num">STEP 03</div><h3>Confirm the arrangement</h3><p>Once terms, schedule and availability are agreed, confirm your monthly commute plan.</p></article></div></section>
-<section class="section" id="coverage"><div class="coverage"><div><h2>Serving teachers across Lucknow and nearby areas</h2><p>किराया सड़क की गणना की गई दूरी, ड्यूटी दिनों और चुनी गई प्रति-किमी दर के आधार पर अनुमानित होगा। अंतिम दर वाहन, टोल, प्रतीक्षा और उपलब्धता के अनुसार तय होगी।</p></div><div class="areas">Lucknow · Gomti Nagar · Indira Nagar · Aliganj · Jankipuram · Alambagh · Kanpur Road · nearby NCR-region routes subject to availability</div></div></section>
+<section class="section" id="coverage"><div class="coverage"><div><h2>प्रारंभिक सेवा क्षेत्र: बाराबंकी, सीतापुर और उन्नाव</h2><p>किराया सड़क की गणना की गई दूरी, ड्यूटी दिनों और चुनी गई प्रति-किमी दर के आधार पर अनुमानित होगा। अंतिम दर वाहन, टोल, प्रतीक्षा और उपलब्धता के अनुसार तय होगी।</p></div><div class="areas">प्रारंभिक सेवा क्षेत्र: बाराबंकी · सीतापुर · उन्नाव। लखनऊ से जुड़े रूट और इन जिलों के चयनित क्षेत्रों में उपलब्धता की पुष्टि के बाद सेवा।</div></div></section>
 <section class="section"><div class="section-head"><h2>Frequently asked questions</h2></div><div class="faq"><article><h3>Is this a monthly service?</h3><p>Yes. The service is intended for recurring duty commutes on a monthly rental basis. Final pricing depends on route, days, timings and cab arrangement.</p></article><article><h3>Can teachers share a cab?</h3><p>Shared-route options may be possible when pickup locations and duty timings align. This is subject to route feasibility and seat availability.</p></article><article><h3>Is the fare fixed?</h3><p>A monthly quote is provided after reviewing your route and requirements. Confirm all inclusions, extra kilometres, waiting time, holidays and cancellation terms before booking.</p></article><article><h3>Can I book immediately on this website?</h3><p>इस संस्करण में सड़क-दूरी आधारित अनुमान और इसी ब्राउज़र में सेव प्रोफाइलों का रूट मिलान उपलब्ध है। सभी उपयोगकर्ताओं के बीच लाइव मिलान, वास्तविक बुकिंग, ड्राइवर आवंटन और भुगतान के लिए सुरक्षित सर्वर/डेटाबेस जरूरी है।</p></article></div></section>
 </main>
 <footer><b>Teachers Cab</b> · Monthly cab rental service concept for teachers in the Lucknow State Capital Region.<br>यह अभी प्रोटोटाइप है। रूट दूरी OpenStreetMap-आधारित geocoding और OSRM routing सेवाओं से अनुमानित होती है; दर केवल अनुमान है। प्रोफाइल/रूट-मिलान इसी डिवाइस के ब्राउज़र तक सीमित है। कोई बुकिंग या भुगतान नहीं होता।</footer>
@@ -227,6 +239,21 @@ async function getRoadRoute(origin,destination){
 }
 function formatKm(km){return km.toFixed(1)+' km';}
 function monthlyDutyDays(){return Math.max(1,Math.min(31,Number(document.getElementById('monthlyDays')?.value)||26));}
+
+function toggleManualDistance(){
+ const panel=document.getElementById('manualDistancePanel');
+ panel.style.display=panel.style.display==='none'?'block':'none';
+}
+function calculateManualQuote(){
+ const km=Number(document.getElementById('manualDistanceKm').value);
+ const box=document.getElementById('fareEstimate');
+ if(!Number.isFinite(km)||km<=0){box.style.display='block';box.textContent='कृपया एक तरफ की सही दूरी किलोमीटर में दर्ज करें।';return;}
+ const rate=Math.max(0,Number(document.getElementById('ratePerKm').value)||0);
+ const days=monthlyDutyDays(),dailyKm=km*2,monthlyKm=dailyKm*days,monthlyFare=monthlyKm*rate;
+ box.style.display='block';
+ box.innerHTML=`<b>Manual दूरी के आधार पर अनुमान</b><br>एक तरफ: ${formatKm(km)}<br>आना-जाना: ${formatKm(dailyKm)} प्रतिदिन<br>मासिक दूरी: ${formatKm(monthlyKm)} (${days} ड्यूटी दिन)<br><b>अनुमानित मासिक किराया: ₹${Math.round(monthlyFare).toLocaleString('en-IN')}</b><br><small>गणना: दर्ज की गई एक तरफ की दूरी × 2 × ड्यूटी दिन × ₹${rate}/किमी। दूरी की शुद्धता दर्ज करने वाले व्यक्ति पर निर्भर है; अंतिम किराया ऑपरेटर से पक्का करें।</small>`;
+}
+
 async function calculateQuoteDistance(){
  const origin=document.getElementById('pickup').value.trim(),destination=document.getElementById('drop').value.trim();
  const box=document.getElementById('fareEstimate'); box.style.display='block'; box.textContent='सड़क का रूट और दूरी निकाली जा रही है…';
@@ -317,6 +344,6 @@ function escapeText(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':
 function selectSubscription(plan){const box=document.getElementById('subscriptionNotice');box.style.display='block';box.textContent='Selected: '+plan+'. Submit the monthly quote enquiry above to discuss route, vehicle, price and terms. No subscription is activated by this demo.';}
 function fillPlan(plan){document.getElementById('enquiry').scrollIntoView({behavior:'smooth'});document.getElementById('notice').style.display='block';document.getElementById('notice').textContent='Selected interest: '+plan+'. Please complete the enquiry form below.';}
 refreshAdmin();
-document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const phone=document.getElementById('phone').value.trim();const summary=`Thank you, ${name}. Your enquiry details have been entered in this demo.\\nPickup: ${document.getElementById('pickup').value}\\nDuty location: ${document.getElementById('drop').value}\\nTiming: ${document.getElementById('timing').value}\\nDays: ${document.getElementById('days').value}\\nTeachers: ${document.getElementById('riders').value}\\nContact: ${phone}\\n\\nNo details have been sent. Connect a secure backend/WhatsApp or enquiry service to receive real requests.`;document.getElementById('notice').style.display='block';document.getElementById('notice').textContent=summary;});
+document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const phone=document.getElementById('phone').value.trim();const summary=`Thank you, ${name}. Your enquiry details have been entered in this demo.\\nप्रारंभिक सेवा जिला: ${document.getElementById('pilotDistrict').value}\\nPickup: ${document.getElementById('pickup').value}\\nDuty location: ${document.getElementById('drop').value}\\nTiming: ${document.getElementById('timing').value}\\nDays: ${document.getElementById('days').value}\\nTeachers: ${document.getElementById('riders').value}\\nContact: ${phone}\\n\\nNo details have been sent. Connect a secure backend/WhatsApp or enquiry service to receive real requests.`;document.getElementById('notice').style.display='block';document.getElementById('notice').textContent=summary;});
 </script>
 </body></html>
